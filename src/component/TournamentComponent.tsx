@@ -1,7 +1,11 @@
-import { Button, Form, FormGroup, Input, Label, Col } from 'reactstrap'
-import { useState } from 'react'
+import { Button, Form, FormGroup, Input, Col } from 'reactstrap'
+import { FormEvent, useState } from 'react'
 
-export default function Tournament() {
+type Props = {
+  setTournament: any
+}
+
+export default function TournamentComponent({ setTournament }: Props) {
   const [name, setName] = useState('')
   const [team, setTeam] = useState('')
   const [teams, setTeams] = useState<string[]>([])
@@ -11,35 +15,27 @@ export default function Tournament() {
     teams.push(team)
     setTeams(teams)
     setTeam('')
-    console.log(teams)
   }
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault()
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault()
     const tournament: Tournament = {
       name,
       typeOfEvent,
       teams,
     }
-    console.log(tournament)
+    setTournament(tournament)
   }
 
   const handleRemove = (index: any) => {
     setTeams(teams.filter((e, i) => i != index))
   }
 
-  // const handleChangeTeam = (index: number, value: string) => {
-  //   teams[index] = value
-  //   setTeams(teams)
-  //   console.log(teams)
-  // }
-
   return (
     <div>
       <br />
       <Form onSubmit={handleSubmit}>
         <FormGroup row>
-          {/* <Label sm={2}>Name:</Label> */}
           <Col>
             <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name"></Input>
           </Col>

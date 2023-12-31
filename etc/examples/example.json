@@ -1,0 +1,40 @@
+{
+  "name": "World Cup",
+  "type": "ROUND",
+  "teams": ["T1", "T2", "T3", "T4", "T5", "T6"],
+  "numberOfGroups": 1,
+  "groups": [
+    {
+      "name": "A",
+      "teams": ["T1", "T2", "T3"],
+      "matches": {
+        "firstRound": [
+          { "local": { "name": "T1", "goals": 0 }, "visitor": { "name": "T2", "goals": 0 } },
+          { "local": { "name": "T1", "goals": 0 }, "visitor": { "name": "T3", "goals": 0 } },
+          { "local": { "name": "T2", "goals": 0 }, "visitor": { "name": "T3", "goals": 0 } }
+        ],
+        "secondRound": [
+          { "local": { "name": "T1", "goals": 0 }, "visitor": { "name": "T2", "goals": 0 } },
+          { "local": { "name": "T1", "goals": 0 }, "visitor": { "name": "T3", "goals": 0 } },
+          { "local": { "name": "T2", "goals": 0 }, "visitor": { "name": "T3", "goals": 0 } }
+        ]
+      }
+    },
+    {
+      "name": "B",
+      "teams": ["T4", "T5", "T6"],
+      "matches": {
+        "firstRound": [
+          { "local": { "name": "T4", "goals": 0 }, "visitor": { "name": "T5", "goals": 0 } },
+          { "local": { "name": "T4", "goals": 0 }, "visitor": { "name": "T6", "goals": 0 } },
+          { "local": { "name": "T5", "goals": 0 }, "visitor": { "name": "T6", "goals": 0 } }
+        ],
+        "secondRound": [
+          { "local": { "name": "T4", "goals": 0 }, "visitor": { "name": "T5", "goals": 0 } },
+          { "local": { "name": "T4", "goals": 0 }, "visitor": { "name": "T6", "goals": 0 } },
+          { "local": { "name": "T5", "goals": 0 }, "visitor": { "name": "T6", "goals": 0 } }
+        ]
+      }
+    }
+  ]
+}

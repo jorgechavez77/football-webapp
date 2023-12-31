@@ -1,13 +1,16 @@
-import { Button, Container } from 'reactstrap'
-import Tournament from './Tournament'
+import { Container } from 'reactstrap'
+import TournamentComponent from './TournamentComponent'
+import EventComponent from './EventComponent'
+import { useState } from 'react'
 
 export default function Base() {
+  const [tournament, setTournament] = useState<Tournament>()
+
   return (
     <div>
-      <Container className="bg-light border">
-        {/* <Button color="success">Continue</Button>{" "}
-        <Button color="primary">New</Button> */}
-        <Tournament />
+      <Container className="bg-light border" fluid='sm'>
+        {!!!tournament && <TournamentComponent setTournament={setTournament} />}
+        {!!tournament && <EventComponent tournament={tournament} />}
       </Container>
     </div>
   )
