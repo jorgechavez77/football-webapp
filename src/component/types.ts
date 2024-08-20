@@ -15,14 +15,6 @@ interface Match {
   visitor: Team
 }
 
-interface NewTournament {
-  name: string
-  type: 'ONE_WAY' | 'ROUND'
-  teams: string[]
-  numberOfGroups: number
-  groups: Group[]
-}
-
 interface Group {
   name: string
   teams: string[]
