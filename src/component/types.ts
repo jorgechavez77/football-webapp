@@ -2,7 +2,7 @@ interface Tournament {
   name: string
   typeOfEvent: 'ONE_WAY' | 'ROUND'
   teams: string[]
-  matches?: Math[]
+  matches?: Match[]
 }
 
 interface Team {
@@ -18,5 +18,5 @@ interface Match {
 interface Group {
   name: string
   teams: string[]
-  matches: { firstRound: Math[]; secondRound?: Match[] }
+  matches: { firstRound: Match[]; secondRound?: Match[] }
 }
