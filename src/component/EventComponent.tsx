@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from 'react'
-import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap'
+import { Button, Col, Form, FormGroup, Input, Label, Row } from 'reactstrap'
 import shuffle from 'lodash/shuffle'
 
 type Props = {
@@ -7,6 +7,7 @@ type Props = {
 }
 
 const sortMatches = (teams: string[]) => {
+  console.log('TEST')
   const _teams = structuredClone(teams)
   const shuffledTeams = shuffle(_teams)
   const matches: Match[] = []
@@ -43,7 +44,7 @@ export default function EventComponent({ tournament: { name, teams } }: Props) {
     setMatches(_matches)
   }
 
-  const handleSave = (event: FormEvent) => {
+  const handleSave = () => {
     // event.preventDefault()
     // console.log(matches)
   }
